@@ -22,7 +22,7 @@ ol {
     --another-grey: #2F303A;
     --black-color: #000;
     --blue-color: #2196F3;
-    --white-color: #ffffff; 
+    --white-color: #ffffff;
     --another-white: #F5F4FA;
     --border-header-color: #ECECEC;
     --border-items-color: #EEEEEE;
@@ -58,7 +58,7 @@ body {
     justify-content: space-between;
 }
 
-.page-nav {
+.page-navigation {
     display: flex;
     align-items: center;
 }
@@ -80,17 +80,17 @@ body {
     line-height: 1.19;
     color: var(--black-color);
     margin-right: 93px;
-    
+
 }
 
-.logo-web {
+.page-logo__logo-web {
     color: var(--blue-color);
 }
 
-.header-nav a:hover,
-.header-nav a:focus, 
-.mail-tel a:hover,
-.mail-tel a:focus {
+.menu-navigation a:hover,
+.menu-navigation a:focus,
+.contacts a:hover,
+.contacts a:focus {
     color: var(--blue-color);
 }
 
@@ -112,20 +112,24 @@ body {
     transform: scaleX(1);
 }
 
-.header-nav, .mail-tel{
+.menu-navigation,
+.contacts {
     list-style: none;
     display: flex;
     column-gap: 50px;
-    
+
 }
 
-.studio,.portfolio,.contact {
+.menu-navigation__studio,
+.menu-navigation__portfolio,
+.menu-navigation__contact {
     position: relative;
     color: var(--dark-color);
     transition: color var(--hover-focus-anim);
 }
 
-.mailto,.tel {
+.contacts__mailto-link,
+.contacts__phone-link {
     display: flex;
     align-items: center;
     color: var(--grey-color);
@@ -137,13 +141,14 @@ body {
     text-decoration: none;
 }
 
-.icon-mail, .icon-tel {
+.contacts__mailto-link__icon,
+.contacts__phone-link__icon {
     margin-right: 10px;
 }
 
-.portfolio::after,
-.studio::after,
-.contact::after  {
+.menu-navigation__portfolio::after,
+.menu-navigation__studio::after,
+.menu-navigation__contact::after {
     content: "";
     display: block;
     position: absolute;
@@ -158,19 +163,19 @@ body {
     transition: transform var(--hover-focus-anim);
 }
 
-.portfolio:hover::after,
-.studio:hover::after,
-.contact:hover::after,
-.portfolio:focus::after,
-.studio:focus::after,
-.contact:focus::after {
+.menu-navigation__portfolio:hover::after,
+.menu-navigation__studio:hover::after,
+.menu-navigation__contact:hover::after,
+.menu-navigation__portfolio:focus::after,
+.menu-navigation__studio:focus::after,
+.menu-navigation__contact:focus::after {
     width: 100%;
     transform: scaleX(1);
 }
 
 /* стилі першої секції */
 
-.first-section {
+.solutions {
     background-color: var(--another-grey);
     padding-top: 200px;
     padding-bottom: 200px;
@@ -183,8 +188,8 @@ body {
     margin-right: auto;
 }
 
-.effect-solut {
-    color:var(--white-color);
+.effective-solution {
+    color: var(--white-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -193,7 +198,7 @@ body {
     margin-bottom: 30px;
 }
 
-.open-btn {
+.modal-button {
     cursor: pointer;
     color: var(--white-color);
     font-weight: 700;
@@ -207,20 +212,20 @@ body {
     transition: color var(--hover-focus-anim), background-color var(--hover-focus-anim);
 }
 
-.open-btn:hover,
-.open-btn:focus {
+.modal-button:hover,
+.modal-button:focus {
     background-color: var(--btn-hover);
 }
 
 /* стилі другої секції */
 
-.second-section {
+.our-features {
     font-size: 14px;
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-.our-features {
+.our-features-title {
     position: absolute;
     white-space: nowrap;
     width: 1px;
@@ -233,18 +238,18 @@ body {
     margin: -1px;
 }
 
-.secd-sect-list {
+.our-features-list {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 
-.secd-sect-item {
+.our-features-list__item {
     flex-basis: calc((100% - 90px) / 4);
 }
 
-.fc-icon-bg {
+.features-icon-background {
     display: flex;
     width: 270px;
     height: 120px;
@@ -255,7 +260,7 @@ body {
     margin-bottom: 30px;
 }
 
-.secd-sect-title {
+.our-features-list_title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -264,7 +269,7 @@ body {
     margin-bottom: 10px;
 }
 
-.secd-sect-text {
+.our-features-list_text {
     font-size: 14px;
     line-height: 1.71;
 }
