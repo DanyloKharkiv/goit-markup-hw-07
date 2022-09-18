@@ -30,10 +30,10 @@
     cursor: pointer;
     fill: var(--icon-color);
     transition: background-color var(--hover-focus-anim), fill var(--hover-focus-anim);
-}
 
-.client-list-link:hover,
-.client-list-link:focus {
-    border-color: var(--blue-color);
-    fill: var(--blue-color);
+    &:hover,
+    &:focus {
+            border-color: var(--blue-color);
+            fill: var(--blue-color);
+        }
 }

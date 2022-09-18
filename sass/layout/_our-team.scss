@@ -70,10 +70,10 @@
     fill: var(--icon-color);
     background-color: var(--white-color);
     transition: background-color var(--hover-focus-anim), fill var(--hover-focus-anim);
-}
-
-.social-list-link:hover,
-.social-list-link:focus {
-    background-color: var(--blue-color);
-    fill: var(--white-color);
+    
+    &:hover,
+    &:focus {
+            background-color: var(--blue-color);
+            fill: var(--white-color);
+        }
 }

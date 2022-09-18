@@ -33,9 +33,9 @@
     padding: 10px 32px;
     border-width: 0;
     transition: color var(--hover-focus-anim), background-color var(--hover-focus-anim);
-}
 
-.modal-button:hover,
-.modal-button:focus {
-    background-color: var(--btn-hover);
+    &:hover,
+    &:focus {
+            background-color: var(--btn-hover);
+        }
 }
