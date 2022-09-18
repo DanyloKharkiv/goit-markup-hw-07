@@ -1,0 +1,116 @@
+.page-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.page-header {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border-header-color);
+}
+
+.page-logo {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--black-color);
+    margin-right: 93px;
+
+}
+
+.page-logo__logo-web {
+    color: var(--blue-color);
+}
+
+.menu-navigation a:hover,
+.menu-navigation a:focus,
+.contacts a:hover,
+.contacts a:focus {
+    color: var(--blue-color);
+}
+
+.current-page a {
+    color: var(--blue-color);
+}
+
+.current-page a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: auto;
+    left: auto;
+    bottom: -34px;
+    background-color: var(--blue-color);
+    border-radius: 2px;
+    height: 4px;
+    width: 100%;
+    transform: scaleX(1);
+}
+
+.menu-navigation,
+.contacts {
+    list-style: none;
+    display: flex;
+    column-gap: 50px;
+
+}
+
+.menu-navigation__studio,
+.menu-navigation__portfolio,
+.menu-navigation__contact {
+    position: relative;
+    color: var(--dark-color);
+    transition: color var(--hover-focus-anim);
+}
+
+.contacts__mailto-link,
+.contacts__phone-link {
+    display: flex;
+    align-items: center;
+    color: var(--grey-color);
+    fill: currentColor;
+    transition: color var(--hover-focus-anim);
+}
+
+.contacts__mailto-link__icon,
+.contacts__phone-link__icon {
+    margin-right: 10px;
+}
+
+.menu-navigation__portfolio::after,
+.menu-navigation__studio::after,
+.menu-navigation__contact::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: auto;
+    left: auto;
+    bottom: -34px;
+    background-color: var(--blue-color);
+    border-radius: 2px;
+    height: 4px;
+    width: 0%;
+    transform: scaleX(0);
+    transition: transform var(--hover-focus-anim);
+}
+
+.menu-navigation__portfolio:hover::after,
+.menu-navigation__studio:hover::after,
+.menu-navigation__contact:hover::after,
+.menu-navigation__portfolio:focus::after,
+.menu-navigation__studio:focus::after,
+.menu-navigation__contact:focus::after {
+    width: 100%;
+    transform: scaleX(1);
+}
