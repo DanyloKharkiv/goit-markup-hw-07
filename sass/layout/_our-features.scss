@@ -4,18 +4,18 @@
     padding-bottom: 94px;
 }
 
-.our-features-list {
+.our-features__list {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 
-.our-features-list__item {
+.our-features__item {
     flex-basis: calc((100% - 90px) / 4);
 }
 
-.our-features-list__icon {
+.our-features__icon {
     display: flex;
     width: 270px;
     height: 120px;
@@ -26,7 +26,7 @@
     margin-bottom: 30px;
 }
 
-.our-features-list__title {
+.our-features__title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -35,7 +35,7 @@
     margin-bottom: 10px;
 }
 
-.our-features-list__text {
+.our-features__text {
     font-size: 14px;
     line-height: 1.71;
 }

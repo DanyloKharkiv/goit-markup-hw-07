@@ -39,16 +39,9 @@
     display: flex;
     column-gap: 50px;
 
-}
+}   
 
-.menu-navigation a:hover,
-.menu-navigation a:focus,
-.contacts a:hover,
-.contacts a:focus {
-    color: var(--blue-color);
-}
-
-.current-page a {
+.current--page a {
     color: var(--blue-color);
 
     &::after {
@@ -66,51 +59,51 @@
         }
 }
 
-.menu-navigation__studio,
-.menu-navigation__portfolio,
-.menu-navigation__contact {
+.menu-navigation__link {
     position: relative;
     color: var(--dark-color);
     transition: color var(--hover-focus-anim);
+
+    &:hover,
+    &:focus {
+        color: var(--blue-color);
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: auto;
+        left: auto;
+        bottom: -34px;
+        background-color: var(--blue-color);
+        border-radius: 2px;
+        height: 4px;
+        width: 0%;
+        transform: scaleX(0);
+        transition: transform var(--hover-focus-anim);
+    }
+
+    &:hover::after,
+    &:focus::after {
+        width: 100%;
+        transform: scaleX(1);
+    }
 }
 
-.menu-navigation__portfolio::after,
-.menu-navigation__studio::after,
-.menu-navigation__contact::after {
-    content: "";
-    display: block;
-    position: absolute;
-    right: auto;
-    left: auto;
-    bottom: -34px;
-    background-color: var(--blue-color);
-    border-radius: 2px;
-    height: 4px;
-    width: 0%;
-    transform: scaleX(0);
-    transition: transform var(--hover-focus-anim);
-}
-
-.menu-navigation__portfolio:hover::after,
-.menu-navigation__studio:hover::after,
-.menu-navigation__contact:hover::after,
-.menu-navigation__portfolio:focus::after,
-.menu-navigation__studio:focus::after,
-.menu-navigation__contact:focus::after {
-    width: 100%;
-    transform: scaleX(1);
-}
-
-.contacts__mailto-link,
-.contacts__phone-link {
+.contacts__link {
     display: flex;
     align-items: center;
     color: var(--grey-color);
     fill: currentColor;
     transition: color var(--hover-focus-anim);
+
+    &:hover,
+    &:focus {
+        color: var(--blue-color);
+    }
 }
 
-.contacts__mailto-link__icon,
-.contacts__phone-link__icon {
+.contacts__icon {
     margin-right: 10px;
 }
