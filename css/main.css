@@ -276,7 +276,7 @@ img {
   border-bottom: 1px solid var(--border-header-color);
 }
 
-.page-header-container {
+.page-header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
